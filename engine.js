@@ -4,21 +4,35 @@ class Engine {
  Engine() { }
 
  init() {
-  var count = 0;
-  fs.readdirSync("src").forEach((file) => {
-   if (file.includes(".eg")) {
-    count++;
+  const config = JSON.parse(fs.readFileSync("engine.config.json"));
+  this.sourceDirectory = config.sourceDir;
+  this.outputDirectory = config.outputDir;
 
-    fs.readFile("src/" + file, 'utf8', (err, data) => {
-     if (err) throw err;
+  const args = [];
+  for (const arg in process.argv) {
+   if (!(process.argv[arg].includes("node") || process.argv[arg].includes("app"))) args.push(process.argv[arg]);
+  }
 
-     fs.writeFileSync("dist/" + file + ".js", data);
-     const f = require("./dist/" + file);
-     console.log(f.render());
-    });
+  const options = args.filter(value => value.startsWith("--"));
+  const vars = args.filter(value => !value.startsWith("--"));
+
+  for (const v in vars) {
+   switch (vars[v]) {
+    case "build":
+     console.log("Building source files:");
+     const files = fs.readdirSync(this.sourceDirectory);
+     files.forEach(file => {
+      const data = fs.readFileSync("src/" + file);
+      console.log("   += " + file);
+
+      fs.writeFileSync(this.outputDirectory + "/" + file + ".js", data, 'utf8');
+     });
+     console.log("Preparing html:");
+     break;
+    default:
+     break;
    }
-  });
-  console.log(`Found ${count} Engine files.`);
+  }
  }
 }
 

@@ -1,0 +1,7 @@
+class Test {
+ render() {
+  return '<div class="test"></div>';
+ }
+}
+
+module.exports = new Test();
