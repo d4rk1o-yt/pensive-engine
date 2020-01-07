@@ -1,0 +1,22 @@
+{
+  "name": "engine",
+  "version": "0.0.1",
+  "description": "A templating engine by Pensive",
+  "main": "engine.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d4rk1o-yt/pensive-engine.git"
+  },
+  "keywords": [
+    "TemplateEngine"
+  ],
+  "author": "{d4rk1odev} <d4rk1oyt@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d4rk1o-yt/pensive-engine/issues"
+  },
+  "homepage": "https://github.com/d4rk1o-yt/pensive-engine#readme"
+}
