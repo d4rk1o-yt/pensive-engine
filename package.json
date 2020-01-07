@@ -2,7 +2,7 @@
   "name": "engine",
   "version": "0.0.1",
   "description": "A templating engine by Pensive",
-  "main": "engine.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/d4rk1o-yt/pensive-engine/issues"
   },
-  "homepage": "https://github.com/d4rk1o-yt/pensive-engine#readme"
+  "homepage": "https://github.com/d4rk1o-yt/pensive-engine#readme",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
 }
