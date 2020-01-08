@@ -1,7 +1,0 @@
-class Home {
- render() {
-  return '<div></div>';
- }
-}
-
-module.exports = new Home();
