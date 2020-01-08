@@ -14,5 +14,9 @@
    color: #545e75;
    font-size: 35px;
    font-family: 'Arial';
+   -webkit-user-select: none;  /* Chrome all / Safari all */
+   -moz-user-select: none;     /* Firefox all */
+   -ms-user-select: none;      /* IE 10+ */
+   user-select: none
  }
 </style>
