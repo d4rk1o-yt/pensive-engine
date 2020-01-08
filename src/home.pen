@@ -10,8 +10,8 @@
    height: 100vh;
    line-height: 100vh;
    text-align: center;
-   background: #222A30;
-   color: #279AF1;
+   background: #373f51;
+   color: #545e75;
    font-size: 35px;
    font-family: 'Arial';
  }
