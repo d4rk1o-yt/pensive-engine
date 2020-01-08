@@ -1,4 +1,4 @@
 {
-  "sourceDir": "src",
-  "outputDir": "dist"
+  "sourceDir": "./src",
+  "outputDir": "./dist"
 }
